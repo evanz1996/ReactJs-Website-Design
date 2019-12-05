@@ -1,8 +1,44 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import facebook from "../../images/watch/facebook.png";
+
+const initState = {
+  email: "",
+  password: "",
+  emailError: "",
+  passwordError: ""
+};
 
 class LoginForm extends Component {
+  state = initState;
+
+  handleEmailChange = e => {
+    this.setState({
+      email: e.target.value
+    });
+  };
+
+  handlePasswordChange = e => {
+    this.setState({
+      password: e.target.value
+    });
+  };
+
+  //V A L I D A T E//
+
+  validate = () => {
+    let inputError = false;
+    const errors = {
+      emailError: "",
+      passwordError: ""
+    };
+    if (!this.state.email) {
+      inputError = true;
+      errors.emailError = "Please enter a valid email";
+    }
+  };
+
   render() {
     return (
       <FormContainer>
@@ -11,11 +47,21 @@ class LoginForm extends Component {
             <h1> Sign In</h1>
             <div className="input-container">
               <label> Email or Phone Number</label>
-              <input className="input-empty" type="email" required></input>
+              <input
+                className="input-empty"
+                type="email"
+                onChange={this.handleEmailChange}
+                required
+              ></input>
             </div>
             <div className="input-container">
               <label> Password</label>
-              <input className="input-empty " type="password" required></input>
+              <input
+                className="input-empty "
+                type="password"
+                onChange={this.handlePasswordChange}
+                required
+              ></input>
             </div>
             <div className="input-container">
               <Button type="submit"> Sign in</Button>
@@ -25,7 +71,25 @@ class LoginForm extends Component {
               <input type="checkbox"></input>
               <span className="checkmark"></span>
             </label>
-            <Link to="/ "> Need Help?</Link>
+            <Link to="/ " className="need-help">
+              Need Help?
+            </Link>
+
+            <div className="bottom-form">
+              <img src={facebook} alt="facebook"></img>
+              <Link to="/" className="login-fb-text">
+                Login with facebook
+              </Link>
+              <br />
+              <br />
+              <span style={{ color: "#999", fontSize: "-2rem" }}>
+                New to Theater?
+              </span>
+              &nbsp;
+              <Link to="/" className="sign-up-text">
+                Sign Up now!
+              </Link>
+            </div>
           </form>
         </div>
       </FormContainer>
@@ -124,6 +188,39 @@ const FormContainer = styled.div`
     top: 25%;
     left: 21%;
     transform: rotate(-45deg);
+  }
+
+  .need-help {
+    text-decoration: none;
+    color: #828282;
+    margin-left: 6.6rem;
+    font-size: 0.9rem;
+  }
+
+  //Bottom Form || facebook
+
+  .bottom-form img {
+    width: 2rem;
+    margin: -0.1rem 0.2rem -0.5rem 0;
+    margin-bottom: -1rem;
+  }
+  .login-fb-text {
+    color: #828282;
+    font-size: 1rem;
+  }
+
+  .bottom-form {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+  }
+
+  .sign-up-text {
+    font-size: 1rem;
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
