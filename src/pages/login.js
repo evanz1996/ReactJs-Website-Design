@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import monero from "../images/monero.png";
 import styled from "styled-components";
 import LoginForm from "../components/login/LoginForm";
+import LoginFooter from "../components/login/LoginFooter";
 
 class login extends Component {
   render() {
@@ -11,6 +12,7 @@ class login extends Component {
           <Logo src={monero} alt="logo" />
         </div>
         <LoginForm />
+        <LoginFooter />
       </div>
     );
   }

@@ -145,7 +145,7 @@ const FormContainer = styled.div`
     position: relative;
   }
 
-  input:focus + label {
+  input:focus ~ label {
     top: 0.5rem;
     font-size: 0.7rem;
   }
