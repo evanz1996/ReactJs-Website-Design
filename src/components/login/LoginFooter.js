@@ -18,7 +18,7 @@ class Footer extends Component {
   render() {
     return (
       <FooterContainer>
-        <span style={{ marginLeft: "15%" }}>
+        <span style={{ marginLeft: "1%" }}>
           Questions? <Link>Call-123435-5445</Link>
         </span>
         <div className="footer-columns">

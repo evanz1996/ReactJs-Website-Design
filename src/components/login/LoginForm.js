@@ -133,11 +133,11 @@ const FormContainer = styled.div`
 
   form div label {
     position: absolute;
-    top: 1.4rem;
+    top: 0.5rem;
     left: 1.25rem;
     pointer-events: none;
     color: #8a8a8a;
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: transform 150ms ease-out, font-size 150ms ease-out;
   }
 
@@ -146,8 +146,8 @@ const FormContainer = styled.div`
   }
 
   input:focus ~ label {
-    top: 0.5rem;
-    font-size: 0.7rem;
+    top: 0.5375rem;
+    font-size: 0.1rem;
   }
 
   input:focus {

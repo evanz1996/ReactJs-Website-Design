@@ -23,7 +23,7 @@ class Header extends Component {
         <div className="header-content">
           <Title> See what's next. </Title>
           <SubTitle> WATCH ANYWHERE. CANCEL ANYTIME</SubTitle>
-          <Button className="main-offer-btn" primary>
+          <Button to="/choose-plan" className="main-offer-btn" primary>
             try it now!
             <Icon icon={ic_chevron_right} size={37}></Icon>
           </Button>

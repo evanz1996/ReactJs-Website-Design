@@ -2,7 +2,7 @@ import React from "react";
 import cancel from "../images/watch/cancel.jpg";
 import styled from "styled-components";
 import { Button } from "./Button.js/Button";
-
+import { Link } from "react-router-dom";
 function TabContent1() {
   return (
     <TabContentContainer>
@@ -14,7 +14,9 @@ function TabContent1() {
               commitment. Cancel online anytime
             </span>
             <br />
-            <Button style={{ marginTop: "5rem" }}>try it now</Button>
+            <Link to="/choose-plan">
+              <Button style={{ marginTop: "5rem" }}>try it now</Button>
+            </Link>
           </div>
           <img src={cancel}></img>
         </div>

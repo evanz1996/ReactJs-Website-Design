@@ -4,6 +4,9 @@ import TabComponent from "../components/TabComponent";
 import Footer from "../components/Footer";
 
 class index extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div>

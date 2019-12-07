@@ -4,6 +4,7 @@ import styled from "styled-components";
 import playguitar from "../images/watch/playguitar.jpg";
 import dance from "../images/watch/dance.jpg";
 import culture from "../images/watch/culture.jpg";
+import { Link } from "react-router-dom";
 function TabContent2() {
   return (
     <TabContainer>
@@ -14,7 +15,9 @@ function TabContent2() {
             you!
           </span>
 
-          <Button className="btn"> Try it now!</Button>
+          <Link className="btn" to="/choose-plan">
+            <Button>Try it now!</Button>
+          </Link>
         </div>
         {/* Tab Bottom Content */}
         <div className="tab-bottom-content">
@@ -79,6 +82,9 @@ const TabContainer = styled.div`
   .btn {
   margin: 0 1.25rem 1.25rem
     grid-column: 10/12;
+    font-size: 1rem;
+   
+    
   }
 
 //Tab Bottom Content

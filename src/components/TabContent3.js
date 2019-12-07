@@ -4,6 +4,7 @@ import { Button } from "./Button.js/Button";
 import { Icon } from "react-icons-kit";
 import { checkmark } from "react-icons-kit/ionicons/checkmark";
 import { close } from "react-icons-kit/ionicons/close";
+import { Link } from "react-router-dom";
 
 function TabContent3() {
   return (
@@ -13,7 +14,9 @@ function TabContent3() {
           <span style={{ fontSize: "1.5rem" }}>
             Choose one plan and watch everything on theater!
           </span>
-          <Button className="btn"> Try it now</Button>
+          <Link className="btn" to="/choose-plan">
+            <Button>Try it now</Button>
+          </Link>
         </div>
         {/* Tab Bottom Content */}
         <div classname="tab-bottom-content">
